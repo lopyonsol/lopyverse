@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$LOPY: the happy hamster.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="social-icons">
+        <div class="social-container">
+            <a href="https://t.me/lopyonsol/" target="_blank" class="social-link">
+                <img src="telegram.png" alt="Telegram Logo">
+            </a>
+        </div>
+        <div class="social-container">
+            <a href="https://solscan.io/" target="_blank" class="social-link">
+                <img src="solscan.png" alt="Solscan Logo">
+            </a>
+        </div>
+        <div class="social-container">
+            <a href="https://pump.fun/" target="_blank" class="social-link">
+                <img src="pumpfun.png" alt="Pump.fun Logo">
+            </a>
+        </div>
+        <div class="social-container">
+            <button id="music-toggle" class="music-btn">
+                <img src="play.png" alt="Play Music" id="music-icon">
+            </button>
+        </div>
+    </div>
+
+    <div class="falling-elements"></div>
+
+    <h1 class="custom-title">WELCOME IN THE LOPYVERSE</h1>
+
+    <div class="content">
+        <img src="$LOPY.jpeg" alt="Your Image" class="main-image">
+        <div class="text-container">
+            <p>
+                Lopy is a special hamster whose love for lollipops is legendary. Always holding his sweet treasure, he not only sweetens every situation but inspires an entire revolution: a movement for dreamers determined to color the crypto world with sugar and pure joy. With his colorful hat and unstoppable spirit, Lopy is the symbol of a new way to see the future: sweet, bold, and full of opportunities.
+                <br><br>
+                $LOPY has a dream: to become an icon and give life to a unique movement: <strong>The CandyRun!</strong> A sweet and daring race toward an extraordinary future, where every step is a triumph of sugar and creativity.
+                <br><br>
+                Every day with $LOPY is a sweet step toward a future that smells of victory and candy. Grab your lollipop, join the revolution, and get ready to make history. Because with Lopy, the best is yet to come!
+            </p>
+        </div>
+        <div class="button-container">
+            <a href="https://pump.fun" target="_blank" class="buy-btn">BUY $LOPY</a>
+            <button class="copy-btn" onclick="copyCA()">COPY CA</button>
+        </div>
+    </div>
+
+    <footer>
+        <p class="rnbw">&copy; 2024 $LOPY | ALL RIGHTS RESERVED</p>
+    </footer>
+
+    <audio id="background-music" loop>
+        <source src="LOPY.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js"></script>
+    <script>
+        const music = document.getElementById('background-music');
+        const musicIcon = document.getElementById('music-icon');
+        let isPlaying = false;
+
+        document.getElementById('music-toggle').addEventListener('click', () => {
+            if (isPlaying) {
+                music.pause();
+                musicIcon.src = "play.png";
+                isPlaying = false;
+            } else {
+                music.play();
+                musicIcon.src = "pause.png";
+                isPlaying = true;
+            }
+        });
+
+        function copyCA() {
+            const ca = "YOUR_WALLET_ADDRESS_HERE"; //$LOPY Address Here
+            navigator.clipboard.writeText(ca).then(() => {
+                alert("Address copied to clipboard!");
+            });
+        }
+    </script>
+</body>
+</html>
